@@ -1,0 +1,753 @@
+*{
+    scroll-behavior:smooth;
+}
+body{
+    font-family:'Comfortaa', cursive;
+    background:url('./img/showcase.jpg') no-repeat ;
+    overflow-x: hidden;  
+    overflow-y: scroll;
+    background-attachment: fixed;
+}
+
+@media(min-width: 641px){
+  
+    header ul{
+        margin-left: -40px;
+        margin-right: -20px;
+    }
+    header #branding{
+        font-family: 'Comfortaa', cursive;
+        padding-left: 10px;  
+        padding-right: 20px;
+        width: 120px;
+        height: 40px;
+        border-radius: 5%;
+        font-size: 15px;
+        color: #fff;
+        line-height: 40px;
+        text-align: justify;
+        background: darkblue;
+    }
+    header .code{
+        font-family: 'Comfortaa', cursive; 
+        margin-left: 80px;
+        margin-top: -10px;
+        padding: 0 20px 0 10px;
+        width: 120px;
+        height: 40px;
+        border-radius: 5%;
+        font-size: 15px;
+        color: #fff;
+        line-height: 40px;
+        text-align: justify;
+        background: darkblue;
+    }
+    .container{
+        width:100%;
+        margin-left: 10px;
+        overflow:hidden;
+    }
+    ul{
+        padding-bottom: 30px;
+        margin-left: 40px;
+        border:2px solid darkblue;
+        padding: 10px 0 5px 0px;
+        background-color: darkblue;
+        border-radius: 5px;
+    }
+/*    header{
+        background:#ffffff;
+        color:black;
+        border-radius: 5px;
+        padding-top:5px;
+        min-height:10px;
+    }*/
+    header{
+        top:0;
+    }
+
+    header a{
+        color:white;
+        text-decoration:none;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size:16px;
+    }
+
+    header li{
+        display:inline;
+        padding: 4px 20px 0px 20px;
+        border:0px solid rgb(30, 255, 0);
+        border-radius: 5px;
+    }
+
+    header nav{
+        float:right;
+        margin-top:5px;
+        padding-right:30px;
+    }
+    header .highlight, header .current a{
+        color:black;
+        font-weight:bold;
+    }
+
+    header a:hover{
+        color:darkblue;
+        font-size: 16px;
+    }
+    header li:hover{
+        background-color: white;
+    }
+    .fixed{
+        position:fixed;
+        right:0;
+        top:0;
+        margin:10px 10px 10px 0;
+        display: inline-block;
+    }
+    .dropdown-content{
+        display:none;
+        position: absolute;
+        background-color: darkblue;
+        padding:5px 10px 5px 10px;
+        z-index: 1;
+        border-radius: 5px;
+    }
+    .dropdown-content a{
+        padding:5px 5px 5px 5px;
+        color:white;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .fixed-a{
+        text-decoration: inherit;
+        padding:10px 30px 10px 10px;
+    }
+
+    .fixed:hover .dropdown-content{
+        display:block;
+        left:0;
+        margin-left:-70px
+    }
+    #showcase{
+        min-height:400px;
+        /*background:url('./img/showcase.jpg') no-repeat 0 -400px;*/
+        text-align:center;
+        color:black;
+    }
+
+    #showcase h1{
+        margin-top:20px;
+        font-size:55px;
+        margin-bottom:70px;
+        text-align:center;
+    }
+    #Details{
+        margin-top:40px;
+        width: 100%; height: 100%;
+        display: flex;
+        align-items:baseline;
+        flex-direction:column;
+        position: static;
+    }
+    #aboutme{
+        margin-left:15px;
+        border-radius:5px;
+        margin: 0px 0 0px 0;
+        width: 100%;
+        height: auto;
+        background-image: linear-gradient(to right, #FFffFF, #ffffff);
+    }
+    #skills{
+        border-radius:5px;
+        margin: 0px 0 0 0;
+        width: 100%;
+        height: auto;
+        background-image: linear-gradient(to right, #ffffff, #ffffff);
+    }
+    .align-skills{
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    .front{
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        padding: 0 10px 0 10px;
+        margin: 0px 0px 0 0px;
+        width:170px;
+        height:200px;
+    }
+    .html{
+        width:100%;
+        height: 20px;
+        margin: 30px 0 0 0;
+        padding:0px 0 0 0;
+        border-radius:5px;
+        color:darkblue;
+        background: linear-gradient(to right, green 80%,white 100%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+    }
+    .html:hover{
+        background-position: left bottom;
+        background-color: white;
+        background-size: 90% 100%;        
+        background-repeat: no-repeat;
+    }
+    .css{
+        width:100%;
+        height: 20px;
+        margin: 20px 0 0 0;
+        padding:0px 0 0 0;
+        border-radius:5px;
+        background-color: white;
+        color: darkblue;
+        background: linear-gradient(to right, green 60%,white 90%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+    }
+    .css:hover{
+        background-position: left bottom;
+        background-color: white;
+        background-size: 70% 100%;        
+        background-repeat: no-repeat;
+    }
+    .js{
+        width:100%;
+        height: 20px;
+        margin: 20px 0 0 0;
+        padding:0px 0 0 0;
+        border-radius:5px;
+        background-color: white;
+        color: darkblue;
+        background: linear-gradient(to right, green 40%,white 80%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+    }
+    .js:hover{
+        background-position: left bottom;
+        background-color: white;
+        background-size: 40% 100%;        
+        background-repeat: no-repeat;
+    }
+    .back{
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        padding: 0 10px 0 10px;
+        margin: 0px 0px 0 0px;
+        width:170px;
+        height:200px;
+    }
+    .java{
+        width:100%;
+        height: 20px;
+        margin: 30px 0 0 0;
+        padding:0px 0 0 0px;
+        border-radius:5px;
+        background-color: white;
+        color: darkblue;background: linear-gradient(to right, green 75%,white 100%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+    }
+    .java:hover{
+        background-position: left bottom;
+        background-color: white;
+        background-size: 80% 100%;        
+        background-repeat: no-repeat;
+    }
+    .c{
+        width:100%;
+        height: 20px;
+        margin: 20px 0 0 0;
+        padding:0px 0 0 0;
+        border-radius:5px;
+        background-color: white;
+        color: darkblue;background: linear-gradient(to right, green 90%,white 100%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+    }
+    .c:hover{
+        background-position: left bottom;
+        background-color: white;
+        background-size: 90% 100%;        
+        background-repeat: no-repeat;
+    }
+    .tools{
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        padding: 0 10px 0 10px;
+        margin: 0px 0px 0 0px;
+        width:170px;
+        height:200px;
+    }
+    .mysql{
+        width:100%;
+        height: 20px;
+        margin: -20px 0 0 0;
+        padding:0px 0 0 0;
+        border-radius:5px;
+        background-color: white;
+        color: darkblue;background: linear-gradient(to right, green 50%,white 100%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+    }
+    .mysql:hover{
+        background-position: left bottom;
+        background-color: white;
+        background-size: 50% 100%;        
+        background-repeat: no-repeat;
+    }
+    #education{
+        border-radius:5px;
+        margin: 0px 0 0 0;
+        width: 100%;
+        height: auto;
+        background-image: linear-gradient(to right, #ffffff, #ffffff);
+    }
+    .align-education{
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .grad{
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        padding: 0 10px 0 10px;
+        margin: 0px 0px 0 0px;
+        width:170px;
+        height:200px;
+    }
+    .grad h1{
+        padding-left:60px;
+    }
+    .grad h3{
+        padding-left: 15px;
+    }
+    .grad p{
+        padding-left: 30px;
+    }
+    .twelth{
+        color:white;
+        border-radius:5px;
+        background-color: darkblue;
+        padding: 0 10px 0 10px;
+        margin: 0px 0px 0 0px;
+        width:170px;
+        height:200px;
+    }
+    .twelth h1{
+        padding-left:60px;
+    }
+    .twelth h3{
+        padding-left: 10px;
+    }
+    .twelth p{
+        padding-left: 60px;
+    }
+    .tenth{
+        color:white;
+        border-radius:5px;
+        background-color: darkblue;
+        padding: 0 10px 0 10px;
+        margin: 0px 0px 0 0px;
+        width:170px;
+        height:200px;
+    }
+    .tenth h1{
+        padding-left:60px;
+    }
+    .tenth h3{
+        padding-left: 15px;
+    }
+    .tenth p{
+        padding-left: 40px;
+    }
+    #projects{
+        border-radius:5px;
+        padding-bottom: 15px;
+        width: 100%;
+        height: auto;
+        background-image: linear-gradient(to right, #ffffff, #FFffff);
+    }
+    .align-projects{
+        display: flex;
+        align-items: initial;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+    .col1{
+        display: flex;
+        align-items: initial;
+        flex-direction:column;
+    }
+    .col2{
+        display: flex;
+        align-items: center;
+        flex-direction:column;
+    }
+    .col3{
+        display: flex;
+        align-items: flex-end;
+        flex-direction:column;
+    }
+    .citybus{
+        display: flex;
+        align-items: center;
+        flex-direction:row;
+        
+        margin: 10px 10px 10px 10px;
+        padding:5px 10px 5px 5px;
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        width:280px;
+        height:auto;
+    }
+    .library{
+        display: flex;
+        align-items: center;
+        flex-direction:row;
+        
+        margin: 10px 10px 10px 10px;
+        padding:5px 10px 5px 5px;
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        width:280px;
+        height:auto;
+    }
+    .railway{
+        display: flex;
+        align-items: center;
+        flex-direction:row;
+        
+        margin: 10px 10px 10px 10px;
+        padding:5px 10px 5px 5px;
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        width:280px;
+        height:auto;
+    }
+    .tic-j{
+        display: flex;
+        align-items: center;
+        flex-direction:row;
+        
+        margin: 10px 10px 10px 10px;
+        padding:5px 10px 5px 5px;
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        width:280px;
+        height:auto;
+    }
+    .tic-c{
+        display: flex;
+        align-items: center;
+        flex-direction:row;
+        
+        margin: 10px 10px 10px 10px;
+        padding:5px 10px 5px 5px;
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        width:280px;
+        height:auto;
+    }
+    .tic-a{
+        display: flex;
+        align-items: center;
+        flex-direction:row;
+        
+        margin: 10px 10px 10px 10px;
+        padding:5px 10px 5px 5px;
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        width:280px;
+        height:auto;
+    }
+    .bmi{
+        display: flex;
+        align-items: center;
+        flex-direction:row;
+        
+        margin: 10px 10px 10px 10px;
+        padding:5px 10px 5px 5px;
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        width:280px;
+        height:auto;
+    }
+    .calculator{
+        display: flex;
+        align-items: center;
+        flex-direction:row;
+        
+        margin: 10px 10px 10px 10px;
+        padding:5px 10px 5px 5px;
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        width:280px;
+        height:auto;
+    }
+    .citybus a:hover,.tic-a a:hover,.library a:hover,.railway a:hover,.tic-c a:hover,.tic-j a:hover{
+        font-size:17px;
+        
+    }
+    #experience{
+        border-radius:5px;
+        margin: 0px 0 0 0;
+        width: 100%;
+        height: auto;
+        background-image: linear-gradient(to right, #ffffff, #FFffff);
+    }
+    .align-experience{
+        padding-bottom: 30px;
+        padding-left: 200px;
+        justify-content: space-around;
+    }
+    .t-systems{
+        color:white;
+        background-color: darkblue;
+        border-radius:5px;
+        padding: 0 10px 0 10px;
+        margin: 0px 50px 0 0px;
+        width:auto;
+        height:200px;
+    }
+    #afterexperience{
+        border-radius:5px;
+        width: 100%;
+        height:43vh;
+        background:inherit;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+    #afterabout{
+        border-radius:5px;
+        width: 100%;
+        height:100vh;
+        background: url('./img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg') repeat-y ; 
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+    #aftereducation{
+        border-radius:5px;
+        width: 100%;
+        height:100vh;
+        background: url('./img/ImageHero1.jpg') repeat-y ; 
+        background-size: 100% 100%;
+        background-attachment: fixed;   
+    }
+    #afterskills{
+        border-radius:5px;
+        width: 100%;
+        height:100vh;
+        background: url('./img/1_-aeTDCSlD1RMaeZ3GkdzCg.jpeg') repeat-y ; 
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+    #afterprojects{
+        border-radius:5px;
+        width: 100%;
+        height:100vh;
+        background: url('./img/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg') repeat-y ; 
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+    .footer{
+        bottom:0;
+        left: 0;
+        font-family: inherit;
+        font-weight: bold;
+        margin-top:-100px;
+        height: 100px;
+        width: 100%;
+        border:2px;
+        background-color:#ffffff;
+        overflow: hidden;
+    }
+    .footer a{
+        display: inline;
+        margin-left: 10px;
+    }
+}
+.header{
+    width:100%;
+    height: 300px;
+    background-color: rgb(18, 147, 221);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*For small Screen*/
+@media(max-width: 640px){
+  
+    header ul{
+        margin-top: -95px ;
+        margin-left: 550px;
+        margin-bottom: 75px;
+        margin-right: -20px;
+    }
+    header #branding{
+        margin: 0 0px 0px 0px;
+        font-family: arial;
+        padding: 0 10px 0 10px;  
+        width: 110px;
+        height: 40px;
+        border-radius: 5%;
+        font-size: 15px;
+        color: #fff;
+        line-height: 40px;
+        text-align: justify;
+        background: darkblue;
+    }
+    header .code{
+        font-family: arial;  
+        margin-left: 0px;
+        margin-top: -10px;
+        padding: 0 10px 0 0px;
+        width: 110px;
+        height: 40px;
+        border-radius: 5%;
+        font-size: 15px;
+        color: #fff;
+        line-height: 40px;
+        text-align: end;
+        background: darkblue;
+    }
+    .container{
+        width:100%;
+        margin-left: 10px;
+        overflow:hidden;
+    }
+    ul{
+        padding-bottom: 30px;
+        margin-left: 40px;
+    }
+    header{
+        background:#ffffff;
+        color:black;
+        border-radius: 5px;
+
+        padding-top:5px;
+        min-height:10px;
+        /* border-bottom:#e8491d 3px solid;*/
+    }
+
+    header a{
+        color:black;
+        text-decoration:none;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size:13px;
+        transition-property: font-size;
+        transition-delay: 0.1s;
+    }
+
+    header li{
+    
+        display:inline;
+        padding: 0 20px 0px 20px;
+    }
+
+    header nav{
+        float:right;
+        margin-top:5px;
+        padding-right:30px;
+    }
+
+    header .highlight, header .current a{
+        color:black;
+        font-weight:bold;
+    }
+
+    header a:hover{
+        color:darkblue;
+        font-weight:bold;
+        font-size: 14px;
+    }
+    #showcase{
+        min-height:400px;
+        /*background:url('./img/showcase.jpg') no-repeat 0 -400px;*/
+        text-align:center;
+        color:black;
+    }
+
+    #showcase h1{
+        margin-top:150px;
+        font-size:55px;
+        margin-bottom:10px;
+    }
+    #Details{
+        margin:20px 0 0 0; 
+        width: 100%; height: 100%;
+        /*border: 1px solid powderblue;*/
+        display: flex;
+        align-items: center;
+        flex-direction:column;
+        justify-content: space-around;
+        /*background-image: linear-gradient(to right, #9932CC, #FFFAF0);*/
+        
+    }
+    #Details .education{
+        margin: 10px 0 10px 0;
+        width: 500px;
+        height: 300px;
+        border-style: solid;
+        border-radius: 5px;
+        border-width: 1px 1px 1px 1px;
+        background-image: linear-gradient(to right, #FF00FF, #DAA520);
+    }
+    #Details .skills{
+        margin: 10px 0 10px 0;
+        width: 500px;
+        height: 300px;
+        border-style: solid;
+        border-radius: 5px;
+        border-width: 1px 1px 1px 1px;
+        background-image: linear-gradient(to right, #483D8B, #00CED1);
+    }
+    #Details .aboutme{
+        margin: 10px 0 10px 0;
+        width: 500px;
+        height: 300px;
+        border-style: solid;
+        border-radius: 5px;
+        border-width: 1px 1px 1px 1px;
+        background-image: linear-gradient(to right, #228B22, #FFE4B5);
+    }
+}
